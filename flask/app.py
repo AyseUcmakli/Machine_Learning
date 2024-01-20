@@ -8,3 +8,4 @@ def hello_world():
     preds = model.predict(test_np_input)
     preds_as_str = str(preds)
     return preds_as_str'
+    
