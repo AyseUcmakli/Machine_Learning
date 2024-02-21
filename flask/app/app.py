@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/', methods = ['GET', 'POST'])
 
 def hello_world(): #Endpoint'in fonksiyonu başlar.
-    request_type_str = request.method# İstek türünü belirlemek için request objesinden method özelliğini kullanır. 
+    request_type_str = request.method # İstek türünü belirlemek için request objesinden method özelliğini kullanır. 
                                      # Bu, kullanıcının sayfayı görüntüleyip (GET) veya bir form gönderip (POST) göndermediğini kontrol eder.
     if request_type_str == 'GET':# Eğer istek GET ise, sayfayı görüntüleme işlemi gerçekleştirilir.
         return render_template('index.html', href='static/base_pic.svg')#bir HTML sayfasını tarayıcıya gönderir.sayfanın içinde bir SVG resminin yolu bulunabilir.
