@@ -14,7 +14,7 @@ app = Flask(__name__)
 #işleyebilmesi (POST) için tasarlanmış bir endpoint'tir.
 @app.route('/', methods = ['GET', 'POST'])
 
-def hello_world():#Endpoint'in fonksiyonu başlar.
+def hello_world(): #Endpoint'in fonksiyonu başlar.
     request_type_str = request.method# İstek türünü belirlemek için request objesinden method özelliğini kullanır. 
                                      # Bu, kullanıcının sayfayı görüntüleyip (GET) veya bir form gönderip (POST) göndermediğini kontrol eder.
     if request_type_str == 'GET':# Eğer istek GET ise, sayfayı görüntüleme işlemi gerçekleştirilir.
